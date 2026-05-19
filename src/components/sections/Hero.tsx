@@ -2,7 +2,6 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoImg from "@/assets/mediaworks-logo.png";
 
 const Hero = memo(() => {
   return (
@@ -17,15 +16,11 @@ const Hero = memo(() => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="mb-10 flex justify-center"
+          className="mb-10"
         >
-          <img
-            src={logoImg}
-            alt="MediaWorks Studio - professional post-production studio in Pune"
-            className="w-full max-w-2xl h-auto"
-            loading="eager"
-            decoding="async"
-          />
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-300 uppercase tracking-[0.4em] font-light letter-spacing">
+            Film | Sound | Music
+          </h1>
         </motion.div>
 
         <motion.div
