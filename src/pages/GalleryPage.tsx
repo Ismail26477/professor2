@@ -2,11 +2,10 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import CursorGlow from "@/components/CursorGlow";
 import Footer from "@/components/sections/Footer";
-import ameyWagh from "@/assets/gallery/amey-wagh.png";
-import mangesh from "@/assets/gallery/mangesh-borgaonkar.png";
-import savanee from "@/assets/gallery/savanee-ravindra.png";
+import ameyWagh from "@/assets/gallery/amey-wagh.jpg";
+import mangesh from "@/assets/gallery/mangesh-borgaonkar.jpg";
+import savanee from "@/assets/gallery/savanee-ravindra.jpg";
 import shaunak from "@/assets/gallery/shaunak-avinash.png";
-import siddarth from "@/assets/gallery/siddarth-menon.png";
 import jyoti from "@/assets/gallery/jyoti-subash.png";
 import milind from "@/assets/gallery/milind-gune.png";
 import ashutosh from "@/assets/gallery/ashutosh-javdekar.png";
@@ -21,7 +20,6 @@ const photos = [
   { img: mangesh, name: "Mangesh Borgaonkar", role: "Music Album Dubbing" },
   { img: savanee, name: "Savanee Ravindra", role: "Music Single Dubbing" },
   { img: shaunak, name: "Pt. Shaunak Abhisheki & Avinash Chandrachood", role: "Marathi Single" },
-  { img: siddarth, name: "Siddarth Menon", role: "Marathi Film Dubbing" },
   { img: jyoti, name: "Jyoti Subash", role: "Dubbing for Film Basta" },
   { img: milind, name: "Milind Gune", role: "Ramkrushna Math, Pune · Music Album" },
   { img: ashutosh, name: "Dr. Ashutosh Javdekar", role: "Veen Music Album" },
