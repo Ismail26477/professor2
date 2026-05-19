@@ -8,8 +8,14 @@ const Hero = memo(() => {
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      style={{
+        backgroundImage: "url('/hero-background.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
     >
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black via-black to-black" />
+      <div className="absolute inset-0 -z-10 bg-black/60" />
 
       <div className="container relative text-center px-6 max-w-5xl">
         <motion.div
