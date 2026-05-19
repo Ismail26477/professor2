@@ -12,6 +12,9 @@ import milind from "@/assets/gallery/milind-gune.png";
 import ashutosh from "@/assets/gallery/ashutosh-javdekar.png";
 import avdhoot from "@/assets/gallery/avdhoot-gupte.png";
 import mahalaxmi from "@/assets/gallery/mahalaxmi-iyer.png";
+import uddhav from "@/assets/gallery/uddhav-thakre.jpg";
+import shankar from "@/assets/gallery/shankar-mahadevan.jpg";
+import subodh from "@/assets/gallery/subodh-bhave.jpg";
 
 const photos = [
   { img: ameyWagh, name: "Amey Wagh", role: "Marathi Film Dubbing" },
@@ -22,6 +25,9 @@ const photos = [
   { img: jyoti, name: "Jyoti Subash", role: "Dubbing for Film Basta" },
   { img: milind, name: "Milind Gune", role: "Ramkrushna Math, Pune · Music Album" },
   { img: ashutosh, name: "Dr. Ashutosh Javdekar", role: "Veen Music Album" },
+  { img: uddhav, name: "Shri. Uddhav Thakre", role: "Khakee Gulab Release" },
+  { img: shankar, name: "Shankar Mahadevan", role: "Katyar to Kajarare Promotions Shoot" },
+  { img: subodh, name: "Subodh Bhave", role: "Dubbing For Film" },
   { img: avdhoot, name: "Avdhoot Gupte", role: "Music Single Recording" },
   { img: mahalaxmi, name: "Mahalaxmi Iyer", role: "Dubbing for Album Tujha Ek Themb" },
 ];
