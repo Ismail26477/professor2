@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Media Works Studio — Cinematic Dark Design System */
+
+@layer base {
+  :root {
+    /* Core */
+    --background: 0 0% 5%;            /* #0D0D0D */
+    --background-elevated: 0 0% 7%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Brand orange */
+    --primary: 24 80% 57%;            /* #E8873A */
+    --primary-foreground: 0 0% 5%;
+    --primary-glow: 24 90% 65%;
+    --primary-deep: 27 90% 40%;       /* #C4600A */
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 24 80% 57%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 14%;
+    --border-accent: 24 80% 57%;
+    --input: 0 0% 12%;
+    --ring: 24 80% 57%;
+
+    --radius: 0.25rem;
+
+    /* Gradients */
+    --gradient-orange: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-deep)));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.25), transparent 70%);
+    --gradient-hero-fade: linear-gradient(180deg, hsl(0 0% 5% / 0.4) 0%, hsl(0 0% 5% / 0.7) 60%, hsl(var(--background)) 100%);
+
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(var(--primary) / 0.35);
+    --shadow-card: 0 20px 60px -20px hsl(0 0% 0% / 0.8);
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "ss01", "cv01";
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-display tracking-tight;
+  }
+  h1 {
+    @apply will-change-auto;
+  }
+  img {
+    will-change: auto;
+  }
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+}
+
+@layer components {
+  .display-xl {
+    @apply font-display uppercase leading-[0.9] tracking-tight;
+    font-size: clamp(3rem, 9vw, 8rem);
+  }
+  .display-lg {
+    @apply font-display uppercase leading-[0.95] tracking-tight;
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+  }
+  .eyebrow {
+    @apply font-body text-xs uppercase tracking-[0.4em] text-primary;
+  }
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    will-change: auto;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border;
+  }
+  .accent-divider {
+    @apply h-px w-16 bg-primary;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .glow-orange { box-shadow: var(--shadow-glow); }
+  .bg-gradient-orange { background-image: var(--gradient-orange); }
+  .bg-radial-glow { background-image: var(--gradient-glow); }
+}
